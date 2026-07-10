@@ -1,1 +1,32 @@
+import java.util.Scanner;
+
+public class VotingEligibility {
+    public static void main(String[] args) {
+        // Create a Scanner object to read user input
+        Scanner scanner = new Scanner(System.util.System.in);
+
+        // Prompt the user for their name
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        // Prompt the user for their age
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+
+        // Print custom greeting
+        System.out.println("\nHello, " + name + "!");
+
+        // Check voting eligibility
+        if (age >= 18) {
+            System.out.println("You are eligible to vote.");
+        } else {
+            int yearsLeft = 18 - age;
+            System.out.println("You are not old enough to vote yet.");
+            System.out.println("You will be eligible in " + yearsLeft + " years.");
+        }
+
+        // Close the scanner resource
+        scanner.close();
+    }
+}
 
